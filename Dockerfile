@@ -1,5 +1,8 @@
 FROM nginx:latest
 
+# define environment variable for the Wirecloud service
+ENV WIRECLOUD_SERVER wirecloud
+
 # deploy specific nginx configuration file
 COPY nginx.conf /etc/nginx/nginx.conf
 
@@ -13,7 +16,7 @@ RUN sed -i.bak 's/listen\(.*\)80;/listen 8081;/' /etc/nginx/nginx.conf
 RUN sed -i.bak 's/^user/#user/' /etc/nginx/nginx.conf
 
 # change the wirecloud server by the environment variable
-RUN  sed -i.bak 's/wirecloud/$WIRECLOUD_SERVER/' /etc/nginx/nginx.conf
+RUN  sed -i.bak "s/wirecloud/$WIRECLOUD_SERVER/" /etc/nginx/nginx.conf
 
 # assign nginx user to the root group
 RUN addgroup nginx root
