@@ -4,7 +4,7 @@ FROM nginx:latest
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # support running as arbitrary user which belogs to the root group
-RUN chmod g+rwx /var/cache/nginx /var/run /var/log/nginx
+RUN chmod g+rwx /var/cache/nginx /var/run /var/log/nginx  && chmod -R g+w /etc/nginx
 
 # users are not allowed to listen on privileged ports
 RUN sed -i.bak 's/listen\(.*\)80;/listen 8081;/' /etc/nginx/nginx.conf
@@ -20,3 +20,9 @@ USER 1001
 
 # output port
 EXPOSE 8081
+
+COPY ./entrypoint.sh  /
+
+RUN chmod g+rwx /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
