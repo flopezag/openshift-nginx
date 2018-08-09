@@ -21,8 +21,8 @@ USER 1001
 # output port
 EXPOSE 8081
 
-COPY ./entrypoint.sh  /
+COPY ./docker-entrypoint.sh  /
 
-RUN chmod g+rwx /entrypoint.sh
+RUN chmod g+rwx /docker-entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
