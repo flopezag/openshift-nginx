@@ -1,0 +1,1 @@
+NGINX image to be used in order to connect to the FIWARE Wirecloud in a OpenShift environment.
