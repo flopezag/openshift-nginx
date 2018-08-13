@@ -10,7 +10,7 @@ metadata:
 spec:
   host: nginx-fiware-certification.apps.iot.antel.com.uy
   port:
-    targetPort: 90
+    targetPort: 8080
   to:
     kind: Service
     name: nginx

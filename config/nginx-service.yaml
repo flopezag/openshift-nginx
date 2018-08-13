@@ -9,10 +9,10 @@ metadata:
   name: nginx
 spec:
   ports:
-  - name: 90-tcp
-    port: 90
+  - name: 8080-tcp
+    port: 8080
     protocol: TCP
-    targetPort: 90
+    targetPort: 8080
   - name: 8081-tcp
     port: 8081
     protocol: TCP
