@@ -7,10 +7,10 @@
 	[https://github.com/flopezag/openshift-nginx/issues](https://github.com/flopezag/openshift-nginx/issues)
 
 -	**Maintained by**:  
-	[the NGINX Docker Maintainers](https://github.com/flopezag/openshift-nginx)
+	[the FIWARE OpenShift Docker Maintainers](https://github.com/flopezag/openshift-nginx)
 
 -	**Source of this description**:  
-	[docs repo's `nginx/` directory](https://github.com/flopezag/openshift-nginx/blob/master/doc) ([history](https://github.com/flopezag/openshift-nginx/commits/master/doc))
+	[docs OpenShift NGINX directory](https://github.com/flopezag/openshift-nginx/blob/master/doc) ([history](https://github.com/flopezag/openshift-nginx/commits/master/doc))
 
 -	**Supported Docker versions**:  
 	[the 18.06.0-ce release](https://github.com/docker/docker-ce/releases/tag/v18.06.0-ce) 
